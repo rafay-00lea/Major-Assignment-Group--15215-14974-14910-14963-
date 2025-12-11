@@ -12,3 +12,6 @@ const generateBtn = document.getElementById("generate-btn");
 const downloadBtn = document.getElementById("download-btn");
 const historyList = document.getElementById("history-list");
 const clearHistoryBtn = document.getElementById("clear-history");
+
+// 3. Load History from Local Storage on Page Load
+document.addEventListener("DOMContentLoaded", loadHistory);

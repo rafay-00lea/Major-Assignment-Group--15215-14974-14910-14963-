@@ -41,3 +41,13 @@ generateBtn.addEventListener("click", () => {
 downloadBtn.addEventListener("click", () => {
     qrEngine.downloadQR("my-qr-code.png");
 });
+
+
+function addToHistory(text) {
+    let history = JSON.parse(localStorage.getItem("qr_history")) || [];
+    if (history.length > 0 && history[0] === text) return;
+    history.unshift(text);
+    if (history.length > 5) history.pop();
+    localStorage.setItem("qr_history", JSON.stringify(history));
+    renderHistory();
+}

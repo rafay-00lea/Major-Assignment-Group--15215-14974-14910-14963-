@@ -1,3 +1,6 @@
 /*
  * QREngine.js
  */
+
+class QREngine {
+}

@@ -31,5 +31,17 @@ this.qrCodeObj = new QRCode(this.container, {
 
 downloadQR(fileName = "qrcode.png") {
     // TODO
+    const img = this.container.querySelector("img");
+if (img && img.src) {
+    const link = document.createElement("a");
+    link.href = img.src;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+} else {
+    alert("No QR code generated yet!");
+}
+
 }
 

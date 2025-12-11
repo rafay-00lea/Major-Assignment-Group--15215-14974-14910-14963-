@@ -32,3 +32,8 @@ generateBtn.addEventListener("click", () => {
 
     addToHistory(text);
 });
+
+// 5. Download Button Click Event
+downloadBtn.addEventListener("click", () => {
+    qrEngine.downloadQR("my-qr-code.png");
+});

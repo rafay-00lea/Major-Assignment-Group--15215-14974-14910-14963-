@@ -65,3 +65,8 @@ function renderHistory() {
         historyList.appendChild(li);
     });
 }
+// 6. Clear History Event
+clearHistoryBtn.addEventListener("click", () => {
+    localStorage.removeItem("qr_history");
+    renderHistory();
+});

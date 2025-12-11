@@ -19,3 +19,13 @@ generate(text, options) {
 }
 
 }
+
+this.qrCodeObj = new QRCode(this.container, {
+    text: text,
+    width: parseInt(options.size),
+    height: parseInt(options.size),
+    colorDark: options.color,
+    colorLight: options.bgColor,
+    correctLevel: QRCode.CorrectLevel.H
+});
+

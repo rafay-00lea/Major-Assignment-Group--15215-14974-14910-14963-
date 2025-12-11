@@ -69,3 +69,9 @@ function renderHistory() {
 li.addEventListener("click", () => {
     textInput.value = item;
 });
+
+// 6. Clear History Event
+clearHistoryBtn.addEventListener("click", () => {
+    localStorage.removeItem("qr_history");
+    renderHistory();
+});

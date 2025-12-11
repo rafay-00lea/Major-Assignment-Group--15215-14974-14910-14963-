@@ -9,3 +9,6 @@ class QREngine {
 }
 
 }
+generate(text, options) {
+    // TODO: implement QR generation
+}

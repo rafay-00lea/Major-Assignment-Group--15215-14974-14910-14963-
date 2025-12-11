@@ -46,3 +46,7 @@ function addToHistory(text) {
     localStorage.setItem("qr_history", JSON.stringify(history));
     renderHistory();
 }
+
+function loadHistory() {
+    renderHistory();
+}

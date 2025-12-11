@@ -15,3 +15,20 @@ const clearHistoryBtn = document.getElementById("clear-history");
 
 // 3. Load History from Local Storage on Page Load
 document.addEventListener("DOMContentLoaded", loadHistory);
+
+// 4. Generate Button Click Event
+generateBtn.addEventListener("click", () => {
+    const text = textInput.value.trim();
+    if(!text) return; // Stop if empty
+
+    const options = {
+        color: colorInput.value,
+        bgColor: bgInput.value,
+        size: sizeInput.value
+    };
+
+    qrEngine.generate(text, options);
+    downloadBtn.disabled = false;
+
+    addToHistory(text);
+});

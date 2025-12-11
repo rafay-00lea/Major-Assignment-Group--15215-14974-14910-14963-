@@ -51,3 +51,17 @@ function addToHistory(text) {
     localStorage.setItem("qr_history", JSON.stringify(history));
     renderHistory();
 }
+function loadHistory() {
+    renderHistory();
+}
+function renderHistory() {
+    let history = JSON.parse(localStorage.getItem("qr_history")) || [];
+    historyList.innerHTML = "";
+
+    history.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        li.addEventListener("click", () => { textInput.value = item; });
+        historyList.appendChild(li);
+    });
+}

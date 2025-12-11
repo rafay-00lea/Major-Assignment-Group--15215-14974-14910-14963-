@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced QR Code Manager</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <header>
+            <h1><i class="fa-solid fa-qrcode"></i> QR Manager</h1>
+            <p>Generate, Customize, and Save your QR Codes</p>
+        </header>
+
+        <div class="content-wrapper">
+            <section class="controls-section">
+                <div class="input-group">
+                    <label for="qr-text">Content (URL or Text)</label>
+                    <input type="text" id="qr-text" placeholder="Enter text or URL here..." autocomplete="off">
+                </div>
+
+                <div class="options-group">
+                    <div class="option-item">
+                        <label for="qr-color">Color</label>
+                        <input type="color" id="qr-color" value="#000000">
+                    </div>
+                    <div class="option-item">
+                        <label for="qr-bgcolor">Background</label>
+                        <input type="color" id="qr-bgcolor" value="#ffffff">
+                    </div>
+                    <div class="option-item">
+                        <label for="qr-size">Size</label>
+                        <select id="qr-size">
+                            <option value="128">Small (128px)</option>
+                            <option value="256" selected>Medium (256px)</option>
+                            <option value="512">Large (512px)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button id="generate-btn" class="btn primary">Generate QR</button>
+                    <button id="download-btn" class="btn secondary" disabled>Download PNG</button>
+                </div>
+            </section>
+
+            <section class="display-section">
+                <div class="qr-canvas-container" id="qr-output">
+                    <div class="placeholder">
+                        <i class="fa-solid fa-image"></i>
+                        <p>Preview Area</p>
+                    </div>
+                </div>
+                
+                <div class="history-container">
+                    <h3>Recent Codes</h3>
+                    <ul id="history-list">
+                        </ul>
+                    <button id="clear-history" class="btn text-only">Clear History</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+    <script src="assets/js/QREngine.js"></script>
+    
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

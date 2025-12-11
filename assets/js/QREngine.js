@@ -29,3 +29,7 @@ this.qrCodeObj = new QRCode(this.container, {
     correctLevel: QRCode.CorrectLevel.H
 });
 
+downloadQR(fileName = "qrcode.png") {
+    // TODO
+}
+

@@ -64,3 +64,8 @@ function renderHistory() {
         historyList.appendChild(li);
     });
 }
+ 
+// Click a history item to refill input (inside renderHistory)
+li.addEventListener("click", () => {
+    textInput.value = item;
+});

@@ -13,4 +13,9 @@ generate(text, options) {
     // TODO: implement QR generation
     this.container.innerHTML = "";
 
+    if (!text) {
+    alert("Please enter text or URL");
+    return;
+}
+
 }
